@@ -1,7 +1,7 @@
 # Bucles [Python]
 # Ejercicios de práctica
 
-# Autor: Inove Coding School
+# Autor: Gaston Ricciuti
 # Version: 2.0
 
 # IMPORTANTE: NO borrar los comentarios
@@ -22,5 +22,18 @@ x = 0
 # "while" consultar si <x es igual a 6>, y en ese caso realizar una interrupción del bucle
 # En cada iteracion del bucle debe incrementar el valor de "x" en "2"
 # e imprimir en pantalla el resultado de X (antes de incrementar) con print
+
+while x < 10 and x != 6:
+    print('Valor de X es:', x)
+    x += 2
+
+x = 0
+
+while x < 10:
+    if x == 6:
+        print('El valor de X se interrumpio en:', x)
+        break
+    print('Valor de X es:', x)
+    x += 2
 
 print("terminamos!")

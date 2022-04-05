@@ -22,6 +22,7 @@ Debe caluclar el promedio de todas las notas que se encuentra
 almacenadas en una lista llamada "notas" que ya
 hemos definido al comienzo del archivo
 
+
 Luego transformar la califiación en una letra
 según la siguiente escala:
 - Si el puntaje es mayor igual a 90 --> imprimir A
@@ -49,10 +50,41 @@ cantidad_ausentes = 0   # Aquí debe contar cuantos ausentes hubo
 # Realice aquí el bucle para recorrer todas las notas
 # y cacular la sumatoria
 
+for nota in notas:
+    if nota > 0:
+        sumatoria += nota
+        cantidad_notas += 1
+    else:
+        cantidad_ausentes += 1
+
+promedio = sumatoria / cantidad_notas
+
 # Terminado el bucle calcule el promedio como
 # promedio = sumatoria / cantidad_notas
+
+puntaje = None
+
+if 90 <= promedio <=100:
+    puntaje = 'A'
+elif 80 <= promedio < 90:
+    puntaje = 'B'
+elif 70 <= promedio < 80:
+    puntaje = 'C'
+elif 60 <= promedio < 70:
+    puntaje = 'D'
+else:
+    puntaje = 'F'
 
 # Utilice la nota promedio calculada y transformela
 # a calificación con letras, imprima en pantalla el resultado
 
+print('El promedio de las notas: ',promedio)
+print('Cantidad de ausentes: ',cantidad_ausentes)
+print('Puntaje final alcanzado: ',puntaje)
+
 # Imprima en pantalla al cantidad de ausentes
+
+
+
+
+
